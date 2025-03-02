@@ -1,0 +1,172 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0e5e5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    perspective: 1000px; /* Adds perspective for 3D effect */
+}
+
+.container {
+    transform-style: preserve-3d; /* Enables 3D transformations */
+    transition: transform 0.5s; /* Smooth transition for 3D effect */
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff4c4c;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: rotateY(0deg); /* Initial rotation */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+section:hover {
+    transform: rotateY(5deg); /* Slight rotation on hover */
+}
+
+h2 {
+    color: #ff6f61;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ff6f61;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input:focus, textarea:focus {
+    border-color: #ff4c4c; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #ff4c4c; /* Darker shade on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 5px solid #ff4c4c;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+#caption {
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff4c4c; /* Change color on hover */
+}
+
+/* Responsive Design
